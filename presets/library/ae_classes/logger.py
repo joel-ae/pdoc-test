@@ -2,8 +2,12 @@
 import functools
 import logging
 import sys
-from presets.local.ae_environment import LOG_LEVEL
 from typing import Callable, Any
+
+try:
+    from presets.local.ae_environment import LOG_LEVEL
+except ImportError:
+    LOG_LEVEL = logging.INFO
 
 
 class CallCounted:
