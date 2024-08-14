@@ -28,5 +28,4 @@
 #
 #
 # de_scripts = find_evaluator_scripts()
-#
-# __all__ = de_scripts
+__all__ = ['CRS02']

@@ -9,3 +9,5 @@ CRS02 is a supply chain that is used to evaluate the compatibility of a media as
 ## Preset Data:
 
 """
+
+__all__ = ['CRS02_01_example', 'CRS02_02_example']
