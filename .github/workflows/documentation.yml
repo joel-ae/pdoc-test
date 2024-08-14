@@ -16,9 +16,11 @@ jobs:
         with:
           python-version: '3.11'
 
-      # ADJUST THIS: install all dependencies (including pdoc)
+
       - run: pip install -r requirements-docs.txt
-      - run: pdoc presets -o ./docs
+      - run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/presets
+          pdoc presets -o ./docs
 
       - uses: actions/upload-pages-artifact@v3
         with:
