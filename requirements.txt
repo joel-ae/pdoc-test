@@ -1,0 +1,2 @@
+xmltodict
+sdvi-rally==1.4.0

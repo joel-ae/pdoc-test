@@ -1,0 +1,3809 @@
+{
+  "AQCOptions": {
+    "resetProject": "always",
+    "proxyFileLabel": "QCProxy",
+    "usePProAPI": true,
+    "timeBasedMetadataSources": [
+      {
+        "name": "Provider QC Events",
+        "fileLabel": "TBMDQCEvents",
+        "path": [],
+        "displayPath": [
+          "Provider QC Events"
+        ],
+        "reportKey": "faults",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": false,
+        "isDeletable": false,
+        "structure": [
+          {
+            "key": "name",
+            "name": "Name",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": false
+          },
+          {
+            "key": "message",
+            "name": "Baton Details",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "tech",
+            "name": "Technician Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          },
+          {
+            "key": "supervisor",
+            "name": "Supervisor Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "severity",
+            "name": "Severity",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "3 - High",
+                "key": "high"
+              },
+              {
+                "name": "2 - Medium",
+                "key": "medium"
+              },
+              {
+                "name": "1 - Low",
+                "key": "low"
+              },
+              {
+                "name": "FYI",
+                "key": "FYI"
+              }
+            ]
+          },
+          {
+            "key": "new_issue",
+            "name": "New Issue",
+            "type": "boolean",
+            "metadataPath": []
+          },
+          {
+            "key": "fix_first_domestic",
+            "name": "Fix for First Domestic",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.no_supplier_fix_required}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          },
+          {
+            "key": "no_supplier_fix_required",
+            "name": "No Supplier Fix Required",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.fix_first_domestic}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Segmentation",
+        "fileLabel": "Segmentation",
+        "path": [
+          "Segmentation"
+        ],
+        "displayPath": [],
+        "reportKey": "validatedSegments",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "SEG-01",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-02",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-03",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-04",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-05",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-06",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-07",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-08",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-09",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-10",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-11",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-12",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-13",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-14",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-15",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-16",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-17",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-18",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-19",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-20",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-21",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-22",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-23",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-24",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "SEG-25",
+                "index": "source.segmentIndex"
+              },
+              {
+                "name": "BarsTone",
+                "index": "source.segmentIndex"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Branding",
+        "fileLabel": "Segmentation",
+        "path": [
+          "Branding"
+        ],
+        "displayPath": [],
+        "reportKey": "brandingEvents",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Network Originals Credit"
+              }
+            ]
+          },
+          {
+            "key": "message",
+            "name": "Branding Message",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "A Home.Made.Nation Original Documentary"
+              },
+              {
+                "name": "A Home.Made.Nation Original Movie"
+              },
+              {
+                "name": "A Home.Made.Nation Original Series"
+              },
+              {
+                "name": "A Lifetime Original Documentary"
+              },
+              {
+                "name": "A Lifetime Original Movie"
+              },
+              {
+                "name": "A Lifetime Original Series"
+              },
+              {
+                "name": "An A&E Original Documentary"
+              },
+              {
+                "name": "An A&E Original Movie"
+              },
+              {
+                "name": "An A&E Original Series"
+              },
+              {
+                "name": "An FYI Original Documentary"
+              },
+              {
+                "name": "An FYI Original Movie"
+              },
+              {
+                "name": "An FYI Original Series"
+              },
+              {
+                "name": "The History Channel Original Documentary"
+              },
+              {
+                "name": "The History Channel Original Movie"
+              },
+              {
+                "name": "The History Channel Original Series"
+              },
+              {
+                "name": "No Branding Required"
+              },
+              {
+                "name": "To Be Determined"
+              }
+            ]
+          },
+          {
+            "key": "prebranded",
+            "name": "Prebranded",
+            "type": "boolean",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          }
+        ]
+      },
+      {
+        "name": "Credits/Textless Mark",
+        "fileLabel": "Segmentation",
+        "path": [
+          "Credits/Textless Mark"
+        ],
+        "displayPath": [],
+        "reportKey": "otherEvents",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Additional Content"
+              },
+              {
+                "name": "Bumpers"
+              },
+              {
+                "name": "Closing Credits"
+              },
+              {
+                "name": "Credits Over Black"
+              },
+              {
+                "name": "Full Textless"
+              },
+              {
+                "name": "Graphics Material"
+              },
+              {
+                "name": "Keyed Credits"
+              },
+              {
+                "name": "Opening Credits"
+              },
+              {
+                "name": "Rolled Credits"
+              },
+              {
+                "name": "Snap-ins"
+              },
+              {
+                "name": "Texted Tease Block"
+              },
+              {
+                "name": "Textless Block"
+              },
+              {
+                "name": "Textless Tease Block"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Window of Opportunity",
+        "fileLabel": "Segmentation",
+        "path": [
+          "Window of Opportunity"
+        ],
+        "displayPath": [],
+        "reportKey": "wooEvents",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Animated Bug"
+              },
+              {
+                "name": "Custom Logo"
+              },
+              {
+                "name": "In-Program Message"
+              },
+              {
+                "name": "Virtual Overlay"
+              }
+            ]
+          },
+          {
+            "key": "notes",
+            "name": "Notes",
+            "type": "textarea",
+            "metadataPath": [
+              "notes"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "File Structure Fault",
+        "fileLabel": "ManualFaults",
+        "path": [
+          "File Structure"
+        ],
+        "displayPath": [],
+        "reportKey": "manualFaults",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "promoteOnCreate": true,
+        "selectOnCreate": true,
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Black Slug Out of Spec"
+              },
+              {
+                "name": "File Format Error"
+              },
+              {
+                "name": "File Structure Error"
+              }
+            ]
+          },
+          {
+            "key": "message",
+            "name": "Technician Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          },
+          {
+            "key": "supervisor",
+            "name": "Supervisor Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "severity",
+            "name": "Severity",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "3 - High",
+                "key": "high"
+              },
+              {
+                "name": "2 - Medium",
+                "key": "medium"
+              },
+              {
+                "name": "1 - Low",
+                "key": "low"
+              },
+              {
+                "name": "FYI",
+                "key": "FYI"
+              }
+            ],
+            "implications": [
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Black Slug Out of Spec"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "File Format Error"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "File Structure Error"
+                ],
+                "setValue": "3 - High"
+              }
+            ]
+          },
+          {
+            "key": "new_issue",
+            "name": "New Issue",
+            "type": "boolean",
+            "metadataPath": []
+          },
+          {
+            "key": "fix_first_domestic",
+            "name": "Fix for First Domestic",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.no_supplier_fix_required}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          },
+          {
+            "key": "no_supplier_fix_required",
+            "name": "No Supplier Fix Required",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.fix_first_domestic}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Audio Fault",
+        "fileLabel": "ManualFaults",
+        "path": [
+          "Audio"
+        ],
+        "displayPath": [],
+        "reportKey": "manualFaults",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "promoteOnCreate": true,
+        "selectOnCreate": true,
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Abrupt Audio Edit"
+              },
+              {
+                "name": "Audio Bleed"
+              },
+              {
+                "name": "Audio Distortion"
+              },
+              {
+                "name": "Audio Dropout"
+              },
+              {
+                "name": "Audio Hit"
+              },
+              {
+                "name": "Audio Hum"
+              },
+              {
+                "name": "Audio Level High"
+              },
+              {
+                "name": "Audio Level Low"
+              },
+              {
+                "name": "Background Noise"
+              },
+              {
+                "name": "Buzz"
+              },
+              {
+                "name": "Channel Sync"
+              },
+              {
+                "name": "Clicks"
+              },
+              {
+                "name": "Config Error"
+              },
+              {
+                "name": "Dialogue Dipped"
+              },
+              {
+                "name": "Dialogue Present"
+              },
+              {
+                "name": "EAS Tone"
+              },
+              {
+                "name": "Echo"
+              },
+              {
+                "name": "Extraneous Audio"
+              },
+              {
+                "name": "Generic Audio Fault"
+              },
+              {
+                "name": "Hiss"
+              },
+              {
+                "name": "Hot Mix"
+              },
+              {
+                "name": "Inconsistent Audio Level"
+              },
+              {
+                "name": "Loudness"
+              },
+              {
+                "name": "Loudness Out of Spec"
+              },
+              {
+                "name": "M&E Dipped"
+              },
+              {
+                "name": "Missing Audio"
+              },
+              {
+                "name": "Missing Dialogue"
+              },
+              {
+                "name": "Missing FX"
+              },
+              {
+                "name": "Missing Music"
+              },
+              {
+                "name": "Missing SOT"
+              },
+              {
+                "name": "Missing Textless Audio"
+              },
+              {
+                "name": "Mono Audio"
+              },
+              {
+                "name": "Music Dipped"
+              },
+              {
+                "name": "Narration Preset"
+              },
+              {
+                "name": "Out of Phase"
+              },
+              {
+                "name": "Poor Quality Audio"
+              },
+              {
+                "name": "Pops"
+              },
+              {
+                "name": "Reference Tone Incorrect"
+              },
+              {
+                "name": "Reference Tone Missing"
+              },
+              {
+                "name": "Reverb"
+              },
+              {
+                "name": "SOT Present"
+              },
+              {
+                "name": "SOT/SFX Dipped"
+              },
+              {
+                "name": "Sibilance"
+              },
+              {
+                "name": "Sync Error"
+              },
+              {
+                "name": "Unbalanced Audio"
+              },
+              {
+                "name": "Walla Fault"
+              }
+            ]
+          },
+          {
+            "key": "message",
+            "name": "Technician Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          },
+          {
+            "key": "supervisor",
+            "name": "Supervisor Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "severity",
+            "name": "Severity",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "3 - High",
+                "key": "high"
+              },
+              {
+                "name": "2 - Medium",
+                "key": "medium"
+              },
+              {
+                "name": "1 - Low",
+                "key": "low"
+              },
+              {
+                "name": "FYI",
+                "key": "FYI"
+              }
+            ],
+            "implications": [
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Abrupt Audio Edit"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Audio Bleed"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Audio Distortion"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Audio Dropout"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Audio Hit"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Audio Hum"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Audio Level High"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Audio Level Low"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Background Noise"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Buzz"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Channel Sync"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Clicks"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Config Error"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Dialogue Dipped"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Dialogue Present"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "EAS Tone"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Echo"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Extraneous Audio"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Generic Audio Fault"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Hiss"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Hot Mix"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Inconsistent Audio Level"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Loudness"
+                ],
+                "setValue": "FYI"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Loudness Out of Spec"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "M&E Dipped"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Missing Audio"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Missing Dialogue"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Missing FX"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Missing Music"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Missing SOT"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Missing Textless Audio"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Mono Audio"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Music Dipped"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Narration Preset"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Out of Phase"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Poor Quality Audio"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Pops"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Reference Tone Incorrect"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Reference Tone Missing"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Reverb"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "SOT Present"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "SOT/SFX Dipped"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Sibilance"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Sync Error"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Unbalanced Audio"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Walla Fault"
+                ],
+                "setValue": "3 - High"
+              }
+            ]
+          },
+          {
+            "key": "new_issue",
+            "name": "New Issue",
+            "type": "boolean",
+            "metadataPath": []
+          },
+          {
+            "key": "fix_first_domestic",
+            "name": "Fix for First Domestic",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.no_supplier_fix_required}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          },
+          {
+            "key": "no_supplier_fix_required",
+            "name": "No Supplier Fix Required",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.fix_first_domestic}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Captioning Fault",
+        "fileLabel": "ManualFaults",
+        "path": [
+          "Captioning"
+        ],
+        "displayPath": [],
+        "reportKey": "manualFaults",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "promoteOnCreate": true,
+        "selectOnCreate": true,
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "CC Offset"
+              },
+              {
+                "name": "Extraneous"
+              },
+              {
+                "name": "Mismatch"
+              },
+              {
+                "name": "Missing"
+              },
+              {
+                "name": "Misspelling/Grammar"
+              },
+              {
+                "name": "Obstruction"
+              },
+              {
+                "name": "Placement"
+              },
+              {
+                "name": "S&P (Language in CC only)"
+              },
+              {
+                "name": "Synchronicity"
+              }
+            ]
+          },
+          {
+            "key": "message",
+            "name": "Technician Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          },
+          {
+            "key": "supervisor",
+            "name": "Supervisor Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "severity",
+            "name": "Severity",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "3 - High",
+                "key": "high"
+              },
+              {
+                "name": "2 - Medium",
+                "key": "medium"
+              },
+              {
+                "name": "1 - Low",
+                "key": "low"
+              },
+              {
+                "name": "FYI",
+                "key": "FYI"
+              }
+            ],
+            "implications": [
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "CC Offset"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Extraneous"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Mismatch"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Missing"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Misspelling/Grammar"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Obstruction"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Placement"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "S&P (Language in CC only)"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Synchronicity"
+                ],
+                "setValue": "3 - High"
+              }
+            ]
+          },
+          {
+            "key": "new_issue",
+            "name": "New Issue",
+            "type": "boolean",
+            "metadataPath": []
+          },
+          {
+            "key": "fix_first_domestic",
+            "name": "Fix for First Domestic",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.no_supplier_fix_required}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          },
+          {
+            "key": "no_supplier_fix_required",
+            "name": "No Supplier Fix Required",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.fix_first_domestic}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content / S&P Mark",
+        "fileLabel": "ManualFaults",
+        "path": [
+          "Content - S&P"
+        ],
+        "displayPath": [],
+        "reportKey": "manualFaults",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "promoteOnCreate": true,
+        "selectOnCreate": true,
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Blur Error"
+              },
+              {
+                "name": "Child Molestation"
+              },
+              {
+                "name": "Drug Use"
+              },
+              {
+                "name": "Famous Person Reference"
+              },
+              {
+                "name": "General S&P Fault"
+              },
+              {
+                "name": "Graphic Violence"
+              },
+              {
+                "name": "Improper EAS Use"
+              },
+              {
+                "name": "Language - Audio Only"
+              },
+              {
+                "name": "Language - Audio and Closed Caption"
+              },
+              {
+                "name": "Language - Audio and Text/Graphic"
+              },
+              {
+                "name": "Language - In Video"
+              },
+              {
+                "name": "Language - Incorrect Bleep/Drop"
+              },
+              {
+                "name": "Language - Text/Graphic Only"
+              },
+              {
+                "name": "Natural Disaster"
+              },
+              {
+                "name": "Nudity"
+              },
+              {
+                "name": "Nudity in Art"
+              },
+              {
+                "name": "Plane Crash"
+              },
+              {
+                "name": "Questionable Religious Comment"
+              },
+              {
+                "name": "Racial"
+              },
+              {
+                "name": "School Shooting"
+              },
+              {
+                "name": "Sexual Content"
+              },
+              {
+                "name": "Terrorism"
+              },
+              {
+                "name": "WTC or 9/11"
+              },
+              {
+                "name": "WWII Audio"
+              },
+              {
+                "name": "WWII Audio/Video"
+              },
+              {
+                "name": "WWII Video"
+              },
+              {
+                "name": "War/Military"
+              }
+            ]
+          },
+          {
+            "key": "message",
+            "name": "Technician Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          },
+          {
+            "key": "supervisor",
+            "name": "Supervisor Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "severity",
+            "name": "Severity",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "3 - High",
+                "key": "high"
+              },
+              {
+                "name": "2 - Medium",
+                "key": "medium"
+              },
+              {
+                "name": "1 - Low",
+                "key": "low"
+              },
+              {
+                "name": "FYI",
+                "key": "FYI"
+              }
+            ],
+            "implications": [
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Blur Error"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Child Molestation"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Drug Use"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Famous Person Reference"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "General S&P Fault"
+                ],
+                "setValue": "FYI"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Graphic Violence"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Improper EAS Use"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Language - Audio Only"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Language - Audio and Closed Caption"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Language - Audio and Text/Graphic"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Language - In Video"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Language - Incorrect Bleep/Drop"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Language - Text/Graphic Only"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Natural Disaster"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Nudity"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Nudity in Art"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Plane Crash"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Questionable Religious Comment"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Racial"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "School Shooting"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Sexual Content"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Terrorism"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "WTC or 9/11"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "WWII Audio"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "WWII Audio/Video"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "WWII Video"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "War/Military"
+                ],
+                "setValue": "2 - Medium"
+              }
+            ]
+          },
+          {
+            "key": "new_issue",
+            "name": "New Issue",
+            "type": "boolean",
+            "metadataPath": []
+          },
+          {
+            "key": "fix_first_domestic",
+            "name": "Fix for First Domestic",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.no_supplier_fix_required}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          },
+          {
+            "key": "no_supplier_fix_required",
+            "name": "No Supplier Fix Required",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.fix_first_domestic}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Text/Graphics Mark",
+        "fileLabel": "ManualFaults",
+        "path": [
+          "Text - Graphics"
+        ],
+        "displayPath": [],
+        "reportKey": "manualFaults",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "promoteOnCreate": true,
+        "selectOnCreate": true,
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Copyright Marking"
+              },
+              {
+                "name": "Graphic Error"
+              },
+              {
+                "name": "Text - Misspelling/Grammar"
+              },
+              {
+                "name": "Text - Out of 85% Safety On Left And Right"
+              },
+              {
+                "name": "Text - Out of 90% Safety On All Sides"
+              }
+            ]
+          },
+          {
+            "key": "message",
+            "name": "Technician Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          },
+          {
+            "key": "supervisor",
+            "name": "Supervisor Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "severity",
+            "name": "Severity",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "3 - High",
+                "key": "high"
+              },
+              {
+                "name": "2 - Medium",
+                "key": "medium"
+              },
+              {
+                "name": "1 - Low",
+                "key": "low"
+              },
+              {
+                "name": "FYI",
+                "key": "FYI"
+              }
+            ],
+            "implications": [
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Copyright Marking"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Graphic Error"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Text - Misspelling/Grammar"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Text - Out of 85% Safety On Left And Right"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Text - Out of 90% Safety On All Sides"
+                ],
+                "setValue": "3 - High"
+              }
+            ]
+          },
+          {
+            "key": "new_issue",
+            "name": "New Issue",
+            "type": "boolean",
+            "metadataPath": []
+          },
+          {
+            "key": "fix_first_domestic",
+            "name": "Fix for First Domestic",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.no_supplier_fix_required}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          },
+          {
+            "key": "no_supplier_fix_required",
+            "name": "No Supplier Fix Required",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.fix_first_domestic}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Textless Mark",
+        "fileLabel": "ManualFaults",
+        "path": [
+          "Textless"
+        ],
+        "displayPath": [],
+        "reportKey": "manualFaults",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "promoteOnCreate": true,
+        "selectOnCreate": true,
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Back Plate"
+              },
+              {
+                "name": "Generic Textless Error"
+              },
+              {
+                "name": "Missing Textless Element/Clean Cover"
+              },
+              {
+                "name": "Missing Textless Padding"
+              },
+              {
+                "name": "Text Present"
+              },
+              {
+                "name": "Textless Log Error"
+              }
+            ]
+          },
+          {
+            "key": "message",
+            "name": "Technician Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          },
+          {
+            "key": "supervisor",
+            "name": "Supervisor Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "severity",
+            "name": "Severity",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "3 - High",
+                "key": "high"
+              },
+              {
+                "name": "2 - Medium",
+                "key": "medium"
+              },
+              {
+                "name": "1 - Low",
+                "key": "low"
+              },
+              {
+                "name": "FYI",
+                "key": "FYI"
+              }
+            ],
+            "implications": [
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Back Plate"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Generic Textless Error"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Missing Textless Element/Clean Cover"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Missing Textless Padding"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Text Present"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Textless Log Error"
+                ],
+                "setValue": "2 - Medium"
+              }
+            ]
+          },
+          {
+            "key": "new_issue",
+            "name": "New Issue",
+            "type": "boolean",
+            "metadataPath": []
+          },
+          {
+            "key": "fix_first_domestic",
+            "name": "Fix for First Domestic",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.no_supplier_fix_required}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          },
+          {
+            "key": "no_supplier_fix_required",
+            "name": "No Supplier Fix Required",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.fix_first_domestic}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Timecode Fault",
+        "fileLabel": "ManualFaults",
+        "path": [
+          "Timecode"
+        ],
+        "displayPath": [],
+        "reportKey": "manualFaults",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "promoteOnCreate": true,
+        "selectOnCreate": true,
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Timecode Error"
+              }
+            ]
+          },
+          {
+            "key": "message",
+            "name": "Technician Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          },
+          {
+            "key": "supervisor",
+            "name": "Supervisor Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "severity",
+            "name": "Severity",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "3 - High",
+                "key": "high"
+              },
+              {
+                "name": "2 - Medium",
+                "key": "medium"
+              },
+              {
+                "name": "1 - Low",
+                "key": "low"
+              },
+              {
+                "name": "FYI",
+                "key": "FYI"
+              }
+            ],
+            "implications": [
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Timecode Error"
+                ],
+                "setValue": "3 - High"
+              }
+            ]
+          },
+          {
+            "key": "new_issue",
+            "name": "New Issue",
+            "type": "boolean",
+            "metadataPath": []
+          },
+          {
+            "key": "fix_first_domestic",
+            "name": "Fix for First Domestic",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.no_supplier_fix_required}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          },
+          {
+            "key": "no_supplier_fix_required",
+            "name": "No Supplier Fix Required",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.fix_first_domestic}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Video Fault",
+        "fileLabel": "ManualFaults",
+        "path": [
+          "Video"
+        ],
+        "displayPath": [],
+        "reportKey": "manualFaults",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "promoteOnCreate": true,
+        "selectOnCreate": true,
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Abrupt Video Edit"
+              },
+              {
+                "name": "Aliasing"
+              },
+              {
+                "name": "Anamorphic"
+              },
+              {
+                "name": "Aspect Ratio Error"
+              },
+              {
+                "name": "Banding"
+              },
+              {
+                "name": "Chroma Key Error"
+              },
+              {
+                "name": "Continuity Error"
+              },
+              {
+                "name": "Copyright Error"
+              },
+              {
+                "name": "Credits Error"
+              },
+              {
+                "name": "Credits Missing"
+              },
+              {
+                "name": "Dead Pixel"
+              },
+              {
+                "name": "Dropout Video"
+              },
+              {
+                "name": "EAS Graphic or Visual"
+              },
+              {
+                "name": "Flash Frame"
+              },
+              {
+                "name": "Flicker"
+              },
+              {
+                "name": "Frame Shift"
+              },
+              {
+                "name": "Generic Video Fault"
+              },
+              {
+                "name": "High Black Levels"
+              },
+              {
+                "name": "Image Doubling"
+              },
+              {
+                "name": "Image Not Filling Frame"
+              },
+              {
+                "name": "Interlacing"
+              },
+              {
+                "name": "Jump Cut"
+              },
+              {
+                "name": "Letterbox"
+              },
+              {
+                "name": "Low Black Levels"
+              },
+              {
+                "name": "Low Resolution"
+              },
+              {
+                "name": "Lower Third Error"
+              },
+              {
+                "name": "Macro Blocking"
+              },
+              {
+                "name": "Matte Shift"
+              },
+              {
+                "name": "Media Offline"
+              },
+              {
+                "name": "Moire"
+              },
+              {
+                "name": "Network Originals Credit Fault"
+              },
+              {
+                "name": "No Graphic Mortise"
+              },
+              {
+                "name": "Pillar Box"
+              },
+              {
+                "name": "Poor Transition"
+              },
+              {
+                "name": "Postage Stamp"
+              },
+              {
+                "name": "Production Crew"
+              },
+              {
+                "name": "Production Equipment in Shot"
+              },
+              {
+                "name": "Reference Bars Incorrect"
+              },
+              {
+                "name": "Reference Bars Missing"
+              },
+              {
+                "name": "Slate Incorrect"
+              },
+              {
+                "name": "Stuck Pixel"
+              },
+              {
+                "name": "Video Distortion"
+              },
+              {
+                "name": "Video Dropped Frames"
+              },
+              {
+                "name": "Video Freeze Frame"
+              },
+              {
+                "name": "Video Ghosting"
+              },
+              {
+                "name": "Video Hit"
+              },
+              {
+                "name": "Video Noise"
+              },
+              {
+                "name": "Video Repeated Frames"
+              },
+              {
+                "name": "Video Skipped Frames"
+              },
+              {
+                "name": "Video Tearing"
+              },
+              {
+                "name": "Video Warping"
+              }
+            ]
+          },
+          {
+            "key": "message",
+            "name": "Technician Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          },
+          {
+            "key": "supervisor",
+            "name": "Supervisor Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "severity",
+            "name": "Severity",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "3 - High",
+                "key": "high"
+              },
+              {
+                "name": "2 - Medium",
+                "key": "medium"
+              },
+              {
+                "name": "1 - Low",
+                "key": "low"
+              },
+              {
+                "name": "FYI",
+                "key": "FYI"
+              }
+            ],
+            "implications": [
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Abrupt Video Edit"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Aliasing"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Anamorphic"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Aspect Ratio Error"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Banding"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Chroma Key Error"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Continuity Error"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Copyright Error"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Credits Error"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Credits Missing"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Dead Pixel"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Dropout Video"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "EAS Graphic or Visual"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Flash Frame"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Flicker"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Frame Shift"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Generic Video Fault"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "High Black Levels"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Image Doubling"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Image Not Filling Frame"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Interlacing"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Jump Cut"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Letterbox"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Low Black Levels"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Low Resolution"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Lower Third Error"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Macro Blocking"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Matte Shift"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Media Offline"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Moire"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Network Originals Credit Fault"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "No Graphic Mortise"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Pillar Box"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Poor Transition"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Postage Stamp"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Production Crew"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Production Equipment in Shot"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Reference Bars Incorrect"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Reference Bars Missing"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Slate Incorrect"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Stuck Pixel"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Video Distortion"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Video Dropped Frames"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Video Freeze Frame"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Video Ghosting"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Video Hit"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Video Noise"
+                ],
+                "setValue": "1 - Low"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Video Repeated Frames"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Video Skipped Frames"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Video Tearing"
+                ],
+                "setValue": "2 - Medium"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Video Warping"
+                ],
+                "setValue": "3 - High"
+              }
+            ]
+          },
+          {
+            "key": "new_issue",
+            "name": "New Issue",
+            "type": "boolean",
+            "metadataPath": []
+          },
+          {
+            "key": "fix_first_domestic",
+            "name": "Fix for First Domestic",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.no_supplier_fix_required}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          },
+          {
+            "key": "no_supplier_fix_required",
+            "name": "No Supplier Fix Required",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.fix_first_domestic}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Window of Opportunity Fault",
+        "fileLabel": "ManualFaults",
+        "path": [
+          "Window of Opportunity Fault"
+        ],
+        "displayPath": [],
+        "reportKey": "wooFaults",
+        "eventType": "timed",
+        "isEditable": true,
+        "isCreatable": true,
+        "isDeletable": true,
+        "includeInReport": "always",
+        "promoteOnCreate": true,
+        "selectOnCreate": true,
+        "structure": [
+          {
+            "key": "name",
+            "name": "Type",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "Bug covers L3 / Graphic"
+              },
+              {
+                "name": "Bug duration less than 19;13"
+              },
+              {
+                "name": "Bug falls out of SOM / EOM"
+              },
+              {
+                "name": "Bug within 1 min of SOM / EOM"
+              },
+              {
+                "name": "Bugs entered incorrectly"
+              },
+              {
+                "name": "Bugs within 1 min of each other"
+              }
+            ]
+          },
+          {
+            "key": "message",
+            "name": "Technician Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": true
+          },
+          {
+            "key": "supervisor",
+            "name": "Supervisor Comments",
+            "type": "textarea",
+            "metadataPath": [],
+            "required": false,
+            "isEditable": false
+          },
+          {
+            "key": "severity",
+            "name": "Severity",
+            "type": "select",
+            "metadataPath": [],
+            "required": true,
+            "isEditable": true,
+            "options": [
+              {
+                "name": "3 - High",
+                "key": "high"
+              },
+              {
+                "name": "2 - Medium",
+                "key": "medium"
+              },
+              {
+                "name": "1 - Low",
+                "key": "low"
+              },
+              {
+                "name": "FYI",
+                "key": "FYI"
+              }
+            ],
+            "implications": [
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Bug covers L3 / Graphic"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Bug duration less than 19;13"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Bug falls out of SOM / EOM"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Bug within 1 min of SOM / EOM"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Bugs entered incorrectly"
+                ],
+                "setValue": "3 - High"
+              },
+              {
+                "when": [
+                  "${form.name}",
+                  "=",
+                  "Bugs within 1 min of each other"
+                ],
+                "setValue": "3 - High"
+              }
+            ]
+          },
+          {
+            "key": "new_issue",
+            "name": "New Issue",
+            "type": "boolean",
+            "metadataPath": []
+          },
+          {
+            "key": "fix_first_domestic",
+            "name": "Fix for First Domestic",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.no_supplier_fix_required}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          },
+          {
+            "key": "no_supplier_fix_required",
+            "name": "No Supplier Fix Required",
+            "type": "boolean",
+            "metadataPath": [],
+            "implications": [
+              {
+                "when": [
+                  "${form.fix_first_domestic}",
+                  "=",
+                  true
+                ],
+                "setValue": false
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "UserPrefs": {
+      "hotkeys": []
+    },
+    "OutputPrefs": {
+      "workorderOutputs": [
+        {
+          "name": "Assisted QC Technician Review",
+          "shortName": "QC_Review",
+          "type": "report",
+          "structure": [
+            {
+              "key": "tech_notes",
+              "name": "Notes",
+              "type": "textarea",
+              "metadataPath": [
+                "notes"
+              ]
+            },
+            {
+              "key": "report",
+              "name": "Review Status",
+              "type": "select",
+              "metadataPath": [
+                "status"
+              ],
+              "required": true,
+              "options": [
+                {
+                  "key": "accept",
+                  "name": "Accept"
+                },
+                {
+                  "key": "refer",
+                  "name": "Refer"
+                }
+              ]
+            },
+            {
+              "key": "display_aspect_ratio",
+              "name": "Display Aspect Ratio",
+              "type": "select",
+              "metadataPath": [
+                "display_aspect_ratio"
+              ],
+              "required": true,
+              "options": [
+                {
+                  "name": "16:9 fullframe"
+                },
+                {
+                  "name": "16:9 letterbox"
+                },
+                {
+                  "name": "16:9 pillarbox"
+                },
+                {
+                  "name": "4:3 FF w/ LB"
+                },
+                {
+                  "name": "4:3 FHA"
+                },
+                {
+                  "name": "4:3 fullframe"
+                },
+                {
+                  "name": "4:3 letterbox"
+                }
+              ]
+            },
+            {
+              "key": "tech_room",
+              "name": "Room",
+              "type": "select",
+              "metadataPath": [
+                "room"
+              ],
+              "required": false,
+              "options": [
+                {
+                  "key": "premiere_1",
+                  "name": "Premiere 1"
+                },
+                {
+                  "key": "premiere_2",
+                  "name": "Premiere 2"
+                },
+                {
+                  "key": "premiere_3",
+                  "name": "Premiere 3"
+                },
+                {
+                  "key": "premiere_4",
+                  "name": "Premiere 4"
+                },
+                {
+                  "key": "premiere_5",
+                  "name": "Premiere 5"
+                },
+                {
+                  "key": "premiere_6",
+                  "name": "Premiere 6"
+                },
+                {
+                  "key": "premiere_7",
+                  "name": "Premiere 7"
+                },
+                {
+                  "key": "premiere_8",
+                  "name": "Premiere 8"
+                },
+                {
+                  "key": "premiere_9",
+                  "name": "Premiere 9"
+                },
+                {
+                  "key": "premiere_10",
+                  "name": "Premiere 10"
+                },
+                {
+                  "key": "premiere_dev",
+                  "name": "Premiere Dev"
+                },
+                {
+                  "key": "other",
+                  "name": "Other"
+                }
+              ]
+            },
+            {
+              "key": "technician",
+              "name": "QC Time",
+              "type": "select",
+              "metadataPath": [
+                "qc_time"
+              ],
+              "required": false,
+              "options": [
+                {
+                  "key": "0.25",
+                  "name": "0.25"
+                },
+                {
+                  "key": "0.50",
+                  "name": "0.50"
+                },
+                {
+                  "key": "0.75",
+                  "name": "0.75"
+                },
+                {
+                  "key": "1.00",
+                  "name": "1.00"
+                },
+                {
+                  "key": "1.25",
+                  "name": "1.25"
+                },
+                {
+                  "key": "1.50",
+                  "name": "1.50"
+                },
+                {
+                  "key": "1.75",
+                  "name": "1.75"
+                },
+                {
+                  "key": "2.00",
+                  "name": "2.00"
+                },
+                {
+                  "key": "2.25",
+                  "name": "2.25"
+                },
+                {
+                  "key": "2.50",
+                  "name": "2.50"
+                },
+                {
+                  "key": "2.75",
+                  "name": "2.75"
+                },
+                {
+                  "key": "3.00",
+                  "name": "3.00"
+                },
+                {
+                  "key": "3.25",
+                  "name": "3.25"
+                },
+                {
+                  "key": "3.50",
+                  "name": "3.50"
+                },
+                {
+                  "key": "3.75",
+                  "name": "3.75"
+                },
+                {
+                  "key": "4.00",
+                  "name": "4.00"
+                },
+                {
+                  "key": "4.25",
+                  "name": "4.25"
+                },
+                {
+                  "key": "4.50",
+                  "name": "4.50"
+                },
+                {
+                  "key": "4.75",
+                  "name": "4.75"
+                },
+                {
+                  "key": "5.00",
+                  "name": "5.00"
+                },
+                {
+                  "key": "5.25",
+                  "name": "5.25"
+                },
+                {
+                  "key": "5.50",
+                  "name": "5.50"
+                },
+                {
+                  "key": "5.75",
+                  "name": "5.75"
+                },
+                {
+                  "key": "6.00",
+                  "name": "6.00"
+                },
+                {
+                  "key": "6.25",
+                  "name": "6.25"
+                },
+                {
+                  "key": "6.50",
+                  "name": "6.50"
+                },
+                {
+                  "key": "6.75",
+                  "name": "6.75"
+                },
+                {
+                  "key": "7.00",
+                  "name": "7.00"
+                },
+                {
+                  "key": "7.25",
+                  "name": "7.25"
+                },
+                {
+                  "key": "7.50",
+                  "name": "7.50"
+                },
+                {
+                  "key": "7.75",
+                  "name": "7.75"
+                },
+                {
+                  "key": "8.00",
+                  "name": "8.00"
+                },
+                {
+                  "key": "8.25",
+                  "name": "8.25"
+                },
+                {
+                  "key": "8.50",
+                  "name": "8.50"
+                },
+                {
+                  "key": "8.75",
+                  "name": "8.75"
+                },
+                {
+                  "key": "9.00",
+                  "name": "9.00"
+                },
+                {
+                  "key": "9.25",
+                  "name": "9.25"
+                },
+                {
+                  "key": "9.50",
+                  "name": "9.50"
+                },
+                {
+                  "key": "9.75",
+                  "name": "9.75"
+                },
+                {
+                  "key": "10.00",
+                  "name": "10.00"
+                },
+                {
+                  "key": "10.25",
+                  "name": "10.25"
+                },
+                {
+                  "key": "10.50",
+                  "name": "10.50"
+                },
+                {
+                  "key": "10.75",
+                  "name": "10.75"
+                },
+                {
+                  "key": "11.00",
+                  "name": "11.00"
+                },
+                {
+                  "key": "11.25",
+                  "name": "11.25"
+                },
+                {
+                  "key": "11.50",
+                  "name": "11.50"
+                },
+                {
+                  "key": "11.75",
+                  "name": "11.75"
+                },
+                {
+                  "key": "12.00",
+                  "name": "12.00"
+                },
+                {
+                  "key": "12.25",
+                  "name": "12.25"
+                },
+                {
+                  "key": "12.50",
+                  "name": "12.50"
+                },
+                {
+                  "key": "12.75",
+                  "name": "12.75"
+                },
+                {
+                  "key": "13.00",
+                  "name": "13.00"
+                },
+                {
+                  "key": "13.25",
+                  "name": "13.25"
+                },
+                {
+                  "key": "13.50",
+                  "name": "13.50"
+                },
+                {
+                  "key": "13.75",
+                  "name": "13.75"
+                },
+                {
+                  "key": "14.00",
+                  "name": "14.00"
+                },
+                {
+                  "key": "14.25",
+                  "name": "14.25"
+                },
+                {
+                  "key": "14.50",
+                  "name": "14.50"
+                },
+                {
+                  "key": "14.75",
+                  "name": "14.75"
+                },
+                {
+                  "key": "15.00",
+                  "name": "15.00"
+                },
+                {
+                  "key": "15.25",
+                  "name": "15.25"
+                },
+                {
+                  "key": "15.50",
+                  "name": "15.50"
+                },
+                {
+                  "key": "15.75",
+                  "name": "15.75"
+                },
+                {
+                  "key": "16.00",
+                  "name": "16.00"
+                },
+                {
+                  "key": "16.25",
+                  "name": "16.25"
+                },
+                {
+                  "key": "16.50",
+                  "name": "16.50"
+                },
+                {
+                  "key": "16.75",
+                  "name": "16.75"
+                },
+                {
+                  "key": "17.00",
+                  "name": "17.00"
+                },
+                {
+                  "key": "17.25",
+                  "name": "17.25"
+                },
+                {
+                  "key": "17.50",
+                  "name": "17.50"
+                },
+                {
+                  "key": "17.75",
+                  "name": "17.75"
+                },
+                {
+                  "key": "18.00",
+                  "name": "18.00"
+                },
+                {
+                  "key": "18.25",
+                  "name": "18.25"
+                },
+                {
+                  "key": "18.50",
+                  "name": "18.50"
+                },
+                {
+                  "key": "18.75",
+                  "name": "18.75"
+                },
+                {
+                  "key": "19.00",
+                  "name": "19.00"
+                },
+                {
+                  "key": "19.25",
+                  "name": "19.25"
+                },
+                {
+                  "key": "19.50",
+                  "name": "19.50"
+                },
+                {
+                  "key": "19.75",
+                  "name": "19.75"
+                },
+                {
+                  "key": "20.00",
+                  "name": "20.00"
+                }
+              ]
+            },
+            {
+              "key": "ccOffset",
+              "name": "CC Offset",
+              "type": "boolean",
+              "metadataPath": [
+                "metadata"
+              ]
+            },
+            {
+              "key": "faults",
+              "name": "Include Faults",
+              "type": "boolean",
+              "metadataPath": [
+                "include"
+              ]
+            },
+            {
+              "key": "manualFaults",
+              "name": "Include Manual Faults",
+              "type": "boolean",
+              "metadataPath": [
+                "include"
+              ]
+            },
+            {
+              "key": "wooFaults",
+              "name": "Include Window of Opportunity Faults",
+              "type": "boolean",
+              "metadataPath": [
+                "include"
+              ]
+            },
+            {
+              "key": "brandingEvents",
+              "name": "Include Branding Marks",
+              "type": "boolean",
+              "metadataPath": [
+                "include"
+              ]
+            },
+            {
+              "key": "otherEvents",
+              "name": "Include Credits/Textless Marks",
+              "type": "boolean",
+              "metadataPath": [
+                "include"
+              ]
+            }
+          ]
+        }
+      ],
+      "template": [
+        "{% macro branding(events, file, title='BRANDING EVENTS') %}",
+        "<br/>",
+        "",
+        "### __{{ title }}__",
+        "",
+        "| __IN__ | __OUT__ | __DURATION__ | __BRANDING LANGUAGE__ | __PREBRANDED__ |",
+        "| -- | --- | -------- | ----------------- | ------------- |",
+        "{% for e in events | sort(attribute=e.location.start) %}| {{ e.location.start }} | {{ e.location.end }} | {{ e.duration }} | {{ e.message }} | {{ e.prebranded }} |\n{% endfor %}",
+        "----",
+        "{% endmacro %}",
+        "",
+        "{% macro faults(events, file, title='QC EVENTS') %}",
+        "<br/>",
+        "",
+        "### __{{ title }}__",
+        "",
+        "| __IN__ | __OUT__ | __DURATION__ | __FAULT TYPE__ | __DESCRIPTION__ | __SEVERITY__ |",
+        "| -- | --- | -------- | ---------- | ----------- | -------- |",
+        "{% for e in events | sort(attribute='severity', reverse=true) %}| {{ e.location.start }} | {{ e.location.end }} | {{ e.duration }} | {{ e.name }} | {{ e.message }} | {{ e.severity }} |\n{% endfor %}",
+        "----",
+        "{% endmacro %}",
+        "",
+        "{% macro segments(events, file, title='SEGMENTS') %}",
+        "<br/>",
+        "",
+        "### __{{ title }}__",
+        "",
+        "| __NAME__ | __IN__ | __OUT__ | __DURATION__ | __DESCRIPTION__ |",
+        "| ---- | -- | --- | --- | ----------- |",
+        "{% for s in events | sort(attribute='name') %}| {{ s.name }} {{s.source.segmentIndex }} | {{ s.location.start }} | {{ s.location.end }}  | {{ s.duration }} | {{ s.message }} |\n{% endfor %}",
+        "----",
+        "{% endmacro %}",
+        "",
+        "{% macro misc_events(events, file, title='MISCELLANEOUS EVENTS') %}",
+        "<br/>",
+        "",
+        "### __{{ title }}__",
+        "",
+        "| __NAME__ | __IN__ | __OUT__ | __DURATION__ | __DESCRIPTION__ |",
+        "| ---- | -- | --- | --- | ----------- |",
+        "{% for s in events | sort(attribute=s.location.start) %}| {{ s.name }} | {{ s.location.start }} | {{ s.location.end }}  | {{ s.duration }} | {{ s.message }} |\n{% endfor %}",
+        "----",
+        "{% endmacro %}",
+        "",
+        "{% macro audio_configuration(audio_channels) %}",
+        "<br/>",
+        "",
+        "### __AUDIO CONFIGURATION__",
+        "",
+        "| __CHANNEL__ | __AUDIO CONFIGURATION__ |",
+        "| -- | --- |",
+        "{% for ac in audio_channels %}| {{ ac.number }} | {{ ac.label }} |\n{% endfor %}",
+        "----",
+        "{% endmacro %}",
+        "",
+        "## __{{ _name }}__",
+        "Overall Status: {{ status['report'] }} <br/>",
+        "Date: {{ _createdAt.toUTCString() }}  <br/>",
+        "Assessed by: {{ _user.name }}  <br/>",
+        "Job ID: {{ _task.id }}  <br/>",
+        "",
+        "----",
+        "<br/>",
+        "",
+        "### __NOTES__",
+        "",
+        "{{ notes['tech_notes'] }}",
+        "----",
+        "<br/>",
+        "",
+        "### __FILE INFORMATION__",
+        "",
+        "|    |    |",
+        "| -------- | -------- |",
+        "| __Series Title__ | {{ metadata.series_title }} |",
+        "| __Program ID__ | {{ metadata.program_id }} |",
+        "| __Program/Episode Title__ | {{ metadata.episode_title }} |",
+        "| __Program/Episode Number__ | {{ metadata.episode_number }} |",
+        "| __Filename__ | {{ metadata.filename }} |",
+        "| __Delivery Number__ | {{ metadata.delivery_number }} |",
+        "| __Asset Category__ | {{ metadata.category }} |",
+        "| __Frame Rate__ | {{ metadata.framerate }} |",
+        "| __CC__ | {{ metadata.has_text_tracks }} |",
+        "----",
+        "<br/>",
+        "",
+        "### __TECHNICAL INFORMATION__",
+        "",
+        "|    |    |",
+        "| -------- | -------- |",
+        "| __File Size__ | {{ metadata.file_size }} |",
+        "| __Aspect Ratio__ | {{ display_aspect_ratio.display_aspect_ratio }} |",
+        "| __Video Bit Rate__ | {{ metadata.video_bitrate }} |",
+        "| __Video Codec__ | {{ metadata.video_codec }} |",
+        "| __Scanning Format__ | {{ metadata.scan_type }} |",
+        "| __Video Container__ | {{ metadata.video_container }} |",
+        "| __Lines__ | {{ metadata.height }} |",
+        "| __Audio Codec__ | {{ metadata.audio_codec }} |",
+        "| __Audio Bit Rate__ | {{ metadata.audio_bitrate }} |",
+        "| __Audio Bit Depth__ | {{ metadata.audio_bit_depth }} |",
+        "----",
+        "",
+        "{{ audio_configuration(metadata.audio_channels) }}",
+        "",
+        "{% for file in files %}",
+        "",
+        "{% if file.label in ['Sequence'] %}",
+        "",
+        "{% if include.validatedSegments %}",
+        "{{ segments(file.validatedSegments, file, 'SEGMENTS') }}",
+        "{% endif %}",
+        "",
+        "{% if include.brandingEvents %}",
+        "{{ branding(file.brandingEvents, file, 'BRANDING MARKS') }}",
+        "{% endif %}",
+        "",
+        "{% if include.wooEvents %}",
+        "{{ misc_events(file.wooEvents, file, 'WINDOWS OF OPPORTUNITY') }}",
+        "{% endif %}",
+        "",
+        "{% if include.otherEvents %}",
+        "{{ misc_events(file.otherEvents, file, 'CREDITS/TEXTLESS MARKS') }}",
+        "{% endif %}",
+        "",
+        "{% if include.faults %}",
+        "{{ faults(file.faults, file, 'AUTO QC EVENTS') }}",
+        "{% endif %}",
+        "",
+        "{% if include.manualFaults %}",
+        "{{ faults(file.manualFaults, file, 'MANUAL QC EVENTS') }}",
+        "{% endif %}",
+        "",
+        "{% if include.wooFaults %}",
+        "{{ faults(file.wooFaults, file, 'WINDOW OF OPPORTUNITY QC EVENTS') }}",
+        "{% endif %}",
+        "",
+        "{% endif %}",
+        "",
+        "{% endfor %}"
+      ],
+      "extraData": {
+        "include": {
+          "brandingEvents": true,
+          "validatedSegments": true,
+          "wooEvents": true,
+          "otherEvents": true,
+          "faults": true,
+          "manualFaults": true,
+          "wooFaults": true
+        }
+      }
+    },
+    "ViewPrefs": {
+      "fileIdentifier": "name"
+    }
+  }
+}
