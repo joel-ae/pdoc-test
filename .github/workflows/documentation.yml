@@ -4,7 +4,7 @@ on: [workflow_dispatch, push]
 
 # security: restrict permissions for CI jobs.
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   # Build the documentation and upload the static HTML files as an artifact.
@@ -17,7 +17,7 @@ jobs:
           python-version: '3.11'
 
       # ADJUST THIS: install all dependencies (including pdoc)
-      - run: pip install -e .
+      - run: pip install -r requirements.txt requirements-docs.txt
       - run: pdoc presets -o ./docs
 
       - uses: actions/upload-pages-artifact@v3
